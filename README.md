@@ -8,3 +8,4 @@ https://github.com/ST10477690/MyMusicPlaylist.git
 ![Screenshot 2025-06-19 134620](https://github.com/user-attachments/assets/c4345e82-05a6-496f-9958-eb6fa7f12403)
 ![Screenshot 2025-06-19 134704](https://github.com/user-attachments/assets/49de1d88-f5b4-4e1a-a95f-68643c92f101)
 ![Screenshot 2025-06-19 134800](https://github.com/user-attachments/assets/d0d5b3de-5455-4fd7-8389-1f500509b28f)
+Because of the errors that i have my application could not run and i use i knew how to solve the problem but i couldn't

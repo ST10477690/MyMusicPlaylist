@@ -1,5 +1,6 @@
 package za.ac.iie.mymusicplaylist
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Parcelable
 import android.widget.Button
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import za.ac.iie.mymusicplaylist.Song
+import za.ac.iie.mymusicplaylist.withIndex
 import java.lang.StringBuilder
 import java.util.Locale
 import kotlin.collections.arrayListOf
@@ -28,7 +30,14 @@ private fun Any.average(): Locale? {
 }
 
 
+private fun Intent.getParcelableArrayListExtra(): Any {
 
+    return TODO("Provide the return value")
+}
+
+private operator fun Any.invoke(s: String): Any {
+    TODO("Not yet implemented")
+}
 
 private fun Any.withIndex(): Any {
 
@@ -40,7 +49,7 @@ private fun Any.withIndex(): Any {
             enableEdgeToEdge()
             setContentView(R.layout.activity_main2)
 
-            val playlist = intent.getParcelableExtra<Songs>(/* name = */ "playlist") ?:arrayListOf()
+            val playlist = intent.getParcelableArrayListExtra()("playlist")
             val listOfSongs = findViewById<TextView>(R.id.listOfSongs)
             val displayButton = findViewById<Button>(R.id.AverageButton)
             val backButton = findViewById<Button>(R.id.backButton)
@@ -49,7 +58,6 @@ private fun Any.withIndex(): Any {
             val builder = StringBuilder()
             for ((index, song) in playlist.withIndex1()) {
                 builder.append("Song ${index + 1}:/nTitle: ${song.title}/nArtist:${song.artist}/nRating: ${song.rating}/nComment: ${song.comment}/n/n")
-            }
             listOfSongs.text = builder.toString()
 
             //Average rating
@@ -64,6 +72,10 @@ private fun Any.withIndex(): Any {
 
 
 
+
+
+
+
             ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
                 val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
                 v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -73,7 +85,17 @@ private fun Any.withIndex(): Any {
     }
 
 
-    abstract class Songs : Parcelable
+
+
+
+
+
+
+
+
+
+
+
 
 
 
